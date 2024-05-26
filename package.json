@@ -1,0 +1,19 @@
+{
+  "name": "cursos",
+  "version": "1.0.0",
+  "description": "api de cursos",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EP-UnaHur/tp-mton-grupo-6.git"
+  },
+  "author": "Mauro Saavedra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EP-UnaHur/tp-mton-grupo-6/issues"
+  },
+  "homepage": "https://github.com/EP-UnaHur/tp-mton-grupo-6#readme"
+}
