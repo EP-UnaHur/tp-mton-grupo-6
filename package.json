@@ -4,7 +4,8 @@
   "description": "api de cursos",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node src/app.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/EP-UnaHur/tp-mton-grupo-6/issues"
   },
-  "homepage": "https://github.com/EP-UnaHur/tp-mton-grupo-6#readme"
+  "homepage": "https://github.com/EP-UnaHur/tp-mton-grupo-6#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
 }
