@@ -3,7 +3,7 @@
     "username": "root",
     "password": null,
     "database": "dataStore",
-    "host": "127.0.0.1",
+    "host": "dbstore/database.sqlite",
     "dialect": "sqlite"
   },
   "test": {
