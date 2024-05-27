@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "nombre": "Informatica",
+        "grado": "2",
+        "universidad": "UNAHUR"
+    },
+    {
+        "id": 2,
+        "nombre": "Periodismo deportivo",
+        "grado": "4",
+        "universidad": "UNAHUR"
+    }
+]
