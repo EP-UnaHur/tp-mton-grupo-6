@@ -5,6 +5,7 @@ const carreraRoute = require('./routes/carrera.route')
 const materiaRoute = require('./routes/materia.route')
 const cursoRoute = require('./routes/curso.route')
 const profesorRoute = require('./routes/profesor.route')
+const cursos_profesorRoute = require('./routes/curso_profesor.route')
 
 const _ = require('lodash');
 const app = express();
@@ -13,6 +14,7 @@ app.use(carreraRoute)
 app.use(materiaRoute)
 app.use(cursoRoute)
 app.use(profesorRoute)
+app.use(cursos_profesorRoute)
 
 
 app.listen(3000, async ()=>{

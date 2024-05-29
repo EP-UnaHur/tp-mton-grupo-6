@@ -37,3 +37,6 @@ route.get('/cursos/:id/profesores', async (req, res)=>{
         });
     res.status(200).json(curso)
 })
+
+
+module.exports = route
