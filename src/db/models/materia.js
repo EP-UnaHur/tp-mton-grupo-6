@@ -11,7 +11,13 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Materia.belongsTo(models.Carrera, {
-        as: 'carrera'
+        as: 'carrera',
+        foreignKey: 'carreraId'
+      })
+
+      Materia.hasMany(models.Curso, {
+        as: 'cursos',
+        foreignKey: 'materiaId'
       })
     }
   }
@@ -23,6 +29,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Materia',
+    timestamps: false
   });
   return Materia;
 };

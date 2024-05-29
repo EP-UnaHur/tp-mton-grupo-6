@@ -1,5 +1,6 @@
 const {Router} = require('express')
-const db = require('../db/models')
+const db = require('../db/models');
+const { includes } = require('lodash');
 
 const route = Router()
 
@@ -47,13 +48,14 @@ route.get('/carreras/:id/materias', async (req, res)=>{
     const carrera = await db.Carrera.findOne(
         {
             where: {id},
-            attributes:['id', 'nombre', 'grado', 'universidad']
-        })
-    const materias = await db.Materia.findAll({
-        where: {carreraId:id},
-        attributes:['id', 'nombre', 'cuatrimestral', 'anio']
-    });
-    res.status(200).json({carrera, materias})
+            include:[
+                {
+                    model: db.Materia,
+                    as: 'materias'
+                }
+                ]
+        });
+    res.status(200).json(carrera)
 })
 
 
