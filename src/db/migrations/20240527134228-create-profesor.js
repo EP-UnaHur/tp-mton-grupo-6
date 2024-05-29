@@ -10,15 +10,18 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       nombre: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       fechaNacimiento: {
+        allowNull: false,
         type: Sequelize.DATE
       },
       legajo: {
         type: Sequelize.NUMBER
       },
       activo: {
+        allowNull: false,
         type: Sequelize.TINYINT
       },
       createdAt: {

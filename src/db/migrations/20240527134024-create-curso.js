@@ -13,15 +13,19 @@ module.exports = {
         type: Sequelize.STRING
       },
       turno: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       fechaInicio: {
+        allowNull: false,
         type: Sequelize.DATE
       },
       fechaFin: {
+        allowNull: false,
         type: Sequelize.DATE
       },
       materiaId: {
+        allowNull: false,
         type: Sequelize.INTEGER
       },
       createdAt: {
