@@ -18,7 +18,7 @@ controller.cursoById = cursoById
 const eliminarCurso = async (req, res)=>{
     const id = req.params.id
     await Curso.destroy({where: {id}})
-    res.status(200).json(`El curso con id ${id} se elimino con exito`)
+    res.status(200).json(`El curso con id ${id} se elimino con exito.`)
 }
 
 controller.eliminarCurso = eliminarCurso

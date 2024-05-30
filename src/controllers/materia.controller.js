@@ -19,7 +19,7 @@ controller.materiaById = materiaById
 const eliminarMateria = async (req, res)=>{
     const id = req.params.id
     await Materia.destroy({where: {id}})
-    res.status(200).json(`La materia con id ${id} se elimino con exito`)
+    res.status(200).json(`La materia con id ${id} se elimino con exito.`)
 }
 
 controller.eliminarMateria = eliminarMateria
