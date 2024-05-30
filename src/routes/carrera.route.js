@@ -1,19 +1,17 @@
 const {Router} = require('express')
-const {Carrera} = require('../db/models')
-const userController = require('../controllers/carrera.controller')
-const { includes } = require('lodash');
+const carreraController = require('../controllers/carrera.controller')
 
 const route = Router()
 
-route.get('/carreras', userController.getAllCarreras)
+route.get('/carreras', carreraController.getAllCarreras)
 
-route.get('/carreras/:id', userController.carreraById)
+route.get('/carreras/:id', carreraController.carreraById)
 
-route.post('/carreras', userController.crearCarrera)
+route.post('/carreras', carreraController.crearCarrera)
 
-route.post('/carreras/:id/materia', userController.crearMateria)
+route.post('/carreras/:id/materia', carreraController.crearMateria)
 
-route.get('/carreras/:id/materias', userController.verMateriasDeCarrera)
+route.get('/carreras/:id/materias', carreraController.verMateriasDeCarrera)
 
 
 module.exports = route
