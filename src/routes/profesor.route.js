@@ -1,18 +1,19 @@
 const {Router} = require('express')
 const {Profesor} = require('../db/models')
 const controller = require('../controllers/controller')
+const middleware = require('../middlewares/middleware')
 
 const route = Router()
 
 route.get('/profesores', controller.getAll(Profesor))
 
-route.get('/profesores/:id', controller.getById(Profesor))
+route.get('/profesores/:id', middleware.existsById(Profesor), controller.getById(Profesor))
 
 route.post('/profesores', controller.crear(Profesor))
 
-route.put('/profesores/:id', controller.modificar(Profesor))
+route.put('/profesores/:id', middleware.existsById(Profesor), controller.modificar(Profesor))
 
-route.delete('/profesores/:id', controller.eliminar(Profesor))
+route.delete('/profesores/:id', middleware.existsById(Profesor), controller.eliminar(Profesor))
 
 
 module.exports = route
