@@ -1,17 +1,18 @@
 const {Router} = require('express')
-const profesorController = require('../controllers/profesor.controller')
+const {Profesor} = require('../db/models')
+const controller = require('../controllers/controller')
 
 const route = Router()
 
-route.get('/profesores', profesorController.getAllProfesores)
+route.get('/profesores', controller.getAll(Profesor))
 
-route.get('/profesores/:id', profesorController.profesorById)
+route.get('/profesores/:id', controller.getById(Profesor))
 
-route.post('/profesores', profesorController.crearProfesor)
+route.post('/profesores', controller.crear(Profesor))
 
-route.put('/profesores/:id', profesorController.modificarProfesor)
+route.put('/profesores/:id', controller.modificar(Profesor))
 
-route.delete('/profesores/:id', profesorController.eliminarProfesor)
+route.delete('/profesores/:id', controller.eliminar(Profesor))
 
 
 module.exports = route
