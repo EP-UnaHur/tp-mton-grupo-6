@@ -15,8 +15,10 @@ app.use(cursoRoute)
 app.use(profesorRoute)
 
 
-app.listen(3000, async ()=>{
-    console.log('la app esta corriendo en el puerto 3000');
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, async ()=>{
+    console.log(`la app esta corriendo en el puerto ${PORT}`);
     try {
         await db.sequelize.authenticate()
         await db.sequelize.sync({force:true});
