@@ -24,3 +24,7 @@ npm run dev
 ## Cambiar puerto
 
 Para cambiar el puerto en el que escucha la API, debe ir al archivo package.json y donde dice "dev: cross-env PORT=3000 nodemon src/app.js" cambiar el valor de PORT al puerto que desee usar.
+
+## Diagrama de entidad-relacion
+
+![Diagrama de entidad-relación](/images/DER.png)
