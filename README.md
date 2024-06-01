@@ -13,6 +13,7 @@ Una vez instalada se deben correr el comando
 ```
 npm i -D sequelize -cli
 npm i -D nodemon
+npm i -D cross-env 
 ```
 
 Para ejecutar el programa como desarrollador ejecute el siguiente comando
