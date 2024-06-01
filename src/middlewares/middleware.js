@@ -1,4 +1,3 @@
-const { error } = require("../schemas/carrera.schema");
 
 const existsById = (Model) => {
     return async (req, res ,next) => {

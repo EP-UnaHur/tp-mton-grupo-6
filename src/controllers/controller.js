@@ -28,9 +28,13 @@ const eliminar = (Model) => {
     return async (req, res)=>{
     const id = req.params.id
     const modelName = Model.modelName || (Model.options.name && Model.options.name.singular);
-    await Model.destroy({where: {id}})
-    res.status(200).json(`${modelName} con id ${id} se elimino con exito`)
+    try {
+        await Model.destroy({where: {id}})
+        res.status(200).json(`${modelName} con id ${id} se elimino con exito`)
     }
+    catch {
+        res.status(500).json(`${modelName} con id ${id} no se pudo eliminar`)
+    }}
 }
 
 controller.eliminar = eliminar
