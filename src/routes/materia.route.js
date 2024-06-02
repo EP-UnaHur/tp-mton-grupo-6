@@ -1,6 +1,5 @@
 const {Router} = require('express')
-const {Materia} = require('../db/models')
-const {Curso} = require('../db/models')
+const {Materia, Curso} = require('../db/models')
 const controller = require('../controllers/controller')
 const middleware = require('../middlewares/middleware')
 const cursoSchema = require('../schemas/curso.schema.js')

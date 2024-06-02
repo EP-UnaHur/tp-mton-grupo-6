@@ -1,6 +1,5 @@
 const {Router} = require('express')
-const {Carrera} = require('../db/models')
-const {Materia} = require('../db/models')
+const {Carrera, Materia} = require('../db/models')
 const controller = require('../controllers/controller')
 const middleware = require('../middlewares/middleware')
 const carreraSchema = require('../schemas/carrera.schema')

@@ -5,14 +5,16 @@ const carreraRoute = require('./routes/carrera.route')
 const materiaRoute = require('./routes/materia.route')
 const cursoRoute = require('./routes/curso.route')
 const profesorRoute = require('./routes/profesor.route')
+//const cursoProfesor = require('./routes/cursoProfesor.route')
 
-const _ = require('lodash');
+
 const app = express();
 app.use(express.json())
 app.use(carreraRoute)
 app.use(materiaRoute)
 app.use(cursoRoute)
 app.use(profesorRoute)
+//app.use(cursoProfesor)
 
 
 const PORT = process.env.PORT || 3000;
